@@ -1,0 +1,29 @@
+{
+  "name": "votor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./voting-platform/dist/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hakman2/votor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hakman2/votor/issues"
+  },
+  "homepage": "https://github.com/Hakman2/votor#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.13.13",
+    "typescript": "^5.8.2"
+  }
+}

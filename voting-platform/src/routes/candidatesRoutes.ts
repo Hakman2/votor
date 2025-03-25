@@ -1,11 +1,12 @@
-import { Router } from 'express';
-import CandidatesController from '../controllers/candidatesController';
+import { Router, Application } from 'express';
+import { CandidatesController } from '../controllers/candidatesController';
 
 const router = Router();
-const candidatesController = new CandidatesController();
 
-export function setCandidatesRoutes(app) {
+export function setCandidatesRoutes(app: Application) {
+    const controller = new CandidatesController();
+
     app.use('/candidates', router);
-    router.get('/', candidatesController.getCandidates.bind(candidatesController));
-    router.post('/vote', candidatesController.voteForCandidate.bind(candidatesController));
+    router.get('/', controller.getCandidates.bind(controller));
+    router.post('/vote', controller.voteForCandidate.bind(controller));
 }
